@@ -1,0 +1,144 @@
+body header {
+    margin: 0px auto;
+    font-family: "Arial", serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(162,224,254), rgb(182,227,252));
+    font-size: 1.2em;
+    color: rgb(33, 64, 110);
+}
+
+main{
+    background: rgb(182,227,252);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#home_img {
+    width: 50%;
+}
+
+main div {
+    padding: 5px;
+}
+
+p {
+    padding:5px;
+}
+
+main aside {
+    padding: 5px;
+    border-style: solid;
+    text-align: center;
+    width: 10em;
+}
+
+footer {
+    clear: both;  /* move past any floated elements */
+    font-size: 0.75em;
+    text-align: center;
+    padding: 3px 5%;
+    background-color: #7dbfff;
+    color: black;
+}
+
+nav {
+    margin: 0;
+    padding: 5px 5%;
+    background-color: #7dbfff;
+    font-size: 1.1em;
+    text-align: center;
+}
+nav ul {
+    margin: 5px;
+    padding: 0;
+
+}
+nav ul li {
+    display: inline;
+    padding-right: 0%;
+    transition: box-shadow 0.5s ease, rotate 0.7s ease;
+
+}
+nav ul li a:hover {
+    border-style: solid;
+    box-shadow: 7px 7px 5px rgb(0, 0, 0);
+    transform: rotate(130deg);
+}
+
+figure {
+    border: solid 1px gray;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: white;
+}
+
+figcaption {
+    text-align: center;
+}
+
+article {
+    margin: 4em;
+}
+
+#current_page {
+    font-weight: bold;
+}
+
+#wrapper {
+    width: 100%;
+    background-color: rgb(235,245,255);
+    margin: 0 auto;
+}
+
+.date_and_time {
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+.left_image, .right_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+    padding: 25px;
+}
+
+.left_figure {
+    float: left;
+    margin-right: 20px;
+}
+
+.right_figure {
+    float: right;
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        font-size: 1rem;
+    }
+    #wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 5rem;
+    }
+    main {
+        flex-direction: row;
+    }
+    .left_image {
+        float: left;
+    }
+    .right_image {
+        float: right;
+    }
+}
