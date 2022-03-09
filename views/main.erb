@@ -10,24 +10,69 @@
 
 <body>
     <header>
-        <h1>Guess the Word</h1>
+        <h2>Guess the Word</h2>
     </header>
     <div id="wrapper">
         <nav>
             <ul>
-                <li><a href="">New Word</a></li></a></li>
+                <a href="">Get Word</a></li></a>
             </ul>
         </nav>
         
         <main>
-            <div>
-                <p>
-                    Guess the Word
-                </p>
+            <div class="word_game">
+                <canvas id="row1letter1" width="400px" height="400px"></canvas>
+                <canvas id="row1letter2" width="400px" height="400px"></canvas>
+                <canvas id="row1letter3" width="400px" height="400px"></canvas>
+                <canvas id="row1letter4" width="400px" height="400px"></canvas>
+                <canvas id="row1letter5" width="400px" height="400px"></canvas>
             </div>
+            <div class="word_game">
+                <canvas id="row2letter1" width="400px" height="400px"></canvas>
+                <canvas id="row2letter2" width="400px" height="400px"></canvas>
+                <canvas id="row2letter3" width="400px" height="400px"></canvas>
+                <canvas id="row2letter4" width="400px" height="400px"></canvas>
+                <canvas id="row2letter5" width="400px" height="400px"></canvas>
+            </div>
+            <div class="word_game">
+                <canvas id="row3letter1" width="400px" height="400px"></canvas>
+                <canvas id="row3letter2" width="400px" height="400px"></canvas>
+                <canvas id="row3letter3" width="400px" height="400px"></canvas>
+                <canvas id="row3letter4" width="400px" height="400px"></canvas>
+                <canvas id="row3letter5" width="400px" height="400px"></canvas>
+            </div>
+            <div class="word_game">
+                <canvas id="row4letter1" width="400px" height="400px"></canvas>
+                <canvas id="row4letter2" width="400px" height="400px"></canvas>
+                <canvas id="row4letter3" width="400px" height="400px"></canvas>
+                <canvas id="row4letter4" width="400px" height="400px"></canvas>
+                <canvas id="row4letter5" width="400px" height="400px"></canvas>
+            </div>
+            <div class="word_game">
+                <canvas id="row5letter1" width="400px" height="400px"></canvas>
+                <canvas id="row5letter2" width="400px" height="400px"></canvas>
+                <canvas id="row5letter3" width="400px" height="400px"></canvas>
+                <canvas id="row5letter4" width="400px" height="400px"></canvas>
+                <canvas id="row5letter5" width="400px" height="400px"></canvas>
+            </div>
+            <div class="word_game">
+                <canvas id="row6letter1" width="400px" height="400px"></canvas>
+                <canvas id="row6letter2" width="400px" height="400px"></canvas>
+                <canvas id="row6letter3" width="400px" height="400px"></canvas>
+                <canvas id="row6letter4" width="400px" height="400px"></canvas>
+                <canvas id="row6letter5" width="400px" height="400px"></canvas>
+            </div>
+            
+            
+          <script>var word = "<%= @word %>"</script>
+          <script type="text/javascript" src="scripts/script.js"></script>
+          <div></div>
+          <div>
+            <input type="text" id="letter_guess"><br><br>
+            <button onclick="makeGuess()">Make Guess</button>
+          </div>
         </main>
-
-
+        
     </div>
     <footer>
         <p><b>Guess the Word</b>, game made by Ben Tindal</p>
