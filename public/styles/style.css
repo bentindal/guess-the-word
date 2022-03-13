@@ -136,9 +136,9 @@ canvas {
         margin: 0 auto;
     }
     canvas {
-      width: 100px;
-      height: 100px;
+      width: 250px;
+      height: 250px;
       margin: 0 auto;
-      background-color: rgb(25, 117, 48);
+      background-color: rgb(184, 184, 184);
     }
 }
