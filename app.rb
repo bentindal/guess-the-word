@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 require "require_all"
 
-set :port, 80
+set :port, 4568
 
 require_rel "models"
 
