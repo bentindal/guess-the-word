@@ -6,7 +6,6 @@ set :port, 80
 
 require_rel "models"
 
-
 get "/" do
   word = Word.new
   @word = word.newWord

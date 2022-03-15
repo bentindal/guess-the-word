@@ -1,102 +1,94 @@
-body header {
-    margin: 0px auto;
-    font-family: "Arial", serif;
-    font-size: 3rem;
-    text-align: center;
-}
-
 body {
     margin: 0;
     width: 100%;
     font-family: Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(162,224,254), rgb(182,227,252));
-    color: rgb(33, 64, 110);
+    background-color:rgb(34, 85, 112);
+    color: rgb(255, 255, 255);
 }
 
 body header {
-    font-size: 2em;
-}
-
-main{
-    background: rgb(0, 166, 255);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-main div {
-    padding: 5px;
-}
-
-p {
-    padding:5px;
-}
-
-main aside {
-    padding: 5px;
-    border-style: solid;
+    margin: 0px auto;
+    font-family: "Arial", serif;
+    font-size: 2rem;
     text-align: center;
-    width: 10em;
-}
-
-footer {
-    clear: both;  /* move past any floated elements */
-    font-size: 0.75em;
-    text-align: center;
-    padding: 3px 5%;
-    background-color: #7dbfff;
-    color: black;
 }
 
 nav {
     margin: 0;
-    padding: 5px 5%;
-    background-color: #7dbfff;
-    font-size: 1.1em;
+    padding: 5px;
+    background-color: rgb(34, 85, 112);
     text-align: center;
 }
 nav ul {
     margin: 5px;
-    padding: 0;
-
-}
-nav ul li a:hover {
-    border-style: solid;
 }
 
-button, input{
-  width: 100%;
-}
-#wrapper {
-    width: 100%;
-    background-color: rgb(235,245,255);
-    margin: 0 auto;
+/* NAV */
+
+main{ /* Bit surrounding everything except the footer */
+    background-color: rgb(34, 85, 112);
 }
 
-.word_game {
-    display: flex;
-    flex-wrap: wrap;
+#wordCanvas{
+    background-color:rgb(34, 85, 112);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10px;
+    text-align: center;
 }
 
-canvas {
-    margin: auto;
+canvas{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     outline: solid;
     height: 50px;
     width: 50px;
     outline-width: 2px;
-    outline-color: rgb(5, 4, 4);
-    background-color: rgb(255, 255, 255);
+    outline-color: rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
 }
 
-.orange {
+/* guessing section */
+#guess{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#guess_hint{
+    text-align: center;
+    color: white;
+}
+
+/* Footer and below! */
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #1e4366;
+    color: rgb(255, 255, 255);
+}
+
+/* Colour classes */
+#wordCanvas canvas.orange {
     background-color: sandybrown;
 }
 
-.green {
+#wordCanvas canvas.green {
     background-color: rgb(64, 194, 97);
 }
 
+.red {
+    background-color: rgb(165, 53, 33);
+}
+
+/* Custom settings for different screen widths */
 @media screen and (min-width: 750px) {
     body {
         font-size: 1em;
@@ -108,11 +100,10 @@ canvas {
     canvas {
       width: 50px;
       height: 50px;
-      background-color: rgb(243, 8, 0);
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 5000px) {
     body {
         font-size: 1em;
     }
@@ -123,11 +114,10 @@ canvas {
     canvas {
       width: 75px;
       height: 75px;
-      background-color: rgb(216, 205, 49);
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 5000px) {
     body {
         font-size: 1em;
     }
@@ -139,6 +129,5 @@ canvas {
       width: 250px;
       height: 250px;
       margin: 0 auto;
-      background-color: rgb(184, 184, 184);
     }
 }
