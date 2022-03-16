@@ -21,7 +21,10 @@ function createBoard(wordLength, guessesAllowed){
 function drawWord(canvas, letter) {
   canvas.font = "bold 400px Arial";
   canvas.fillStyle = "rgb(34, 85, 112)";
-  canvas.fillText(letter, 40, 350);
+  if(letter == "W"){
+    canvas.fillText(letter, 12, 350);
+  }
+  else{canvas.fillText(letter, 60, 350);}
 }
 
 function drawGuess(theGuess){
@@ -50,7 +53,6 @@ function makeGuess(){
   // Check if VALID guess
   drawGuess(guess);
   checkIfCorrect(wordToArray(guess), correctArray);
-  rowPointer += 1
 }
 
 function checkIfCorrect(guessArray, wordArray){
@@ -64,14 +66,38 @@ function checkIfCorrect(guessArray, wordArray){
       }
     }
   }
+  var greensFound = 0
   for(x=0; x<wordArray.length; x++){
     if (guessArray[x] == wordArray[x]){
       console.log(guessArray[x] +" green")
       document.getElementById("canv-"+rowPointer+x).classList.add("green");
+      greensFound += 1
     }
+  }
+
+  rowPointer += 1
+  console.log("Row "+rowPointer+" Greens "+greensFound)
+  if(greensFound == 5){
+    endGame(1) // Win
+  }
+  if(rowPointer >= 6){
+    endGame(0) // Loss
   }
 }
 
+function endGame(state){
+  console.log("Game state " + state)
+  const message = document.getElementById("guess_hint")
+  if(state == 0){ // Loss
+    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>";
+    message.classList.add("red")
+  }
+  else{ // Win
+    message.innerHTML = "Congratulations!";
+    message.classList.add("green")
+  }
+  document.getElementById("tryAgain").innerHTML = "<b>Try Again</b>"
+}
 
 // Main ------------------------->
 var canvasArray = createBoard(5, 6);
