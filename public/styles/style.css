@@ -31,22 +31,19 @@ main{ /* Bit surrounding everything except the footer */
 
 #wordCanvas{
     background-color:rgb(34, 85, 112);
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 10px;
     text-align: center;
 }
 
 canvas{
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     outline: solid;
     height: 50px;
     width: 50px;
     outline-width: 2px;
     outline-color: rgb(0, 0, 0);
-    background-color:rgb(241, 30, 30);
+    background-color:rgb(255, 255, 255);
 }
 
 /* guessing section */
@@ -59,8 +56,13 @@ canvas{
 #guess_hint{
     text-align: center;
     color: white;
+    padding: 5px;
 }
 
+#tryAgain{
+    font-size: 30px;
+    margin: 0 auto;
+}
 /* Footer and below! */
 footer {
     position: fixed;
@@ -81,6 +83,10 @@ footer {
 }
 
 #wordCanvas canvas.green {
+    background-color: rgb(64, 194, 97);
+}
+
+.green {
     background-color: rgb(64, 194, 97);
 }
 

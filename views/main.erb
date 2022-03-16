@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="images/wordlogo.ico">
     <title>Guess the Word</title>
 </head>
 
@@ -12,19 +12,19 @@
     <header>
         <h2>Guess the Word</h2>
     </header>
-        
         <main>
             <div id="wordCanvas">
-                <script>var word = "<%= @word %>"</script>
+                <script>var word = "<%= word %>"</script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
-
-            <b><p id="guess_hint">Have a guess!</p></b>
+            <strong><p id="guess_hint">Have a guess!</p></strong>
             <div id="guess">
-                <input type="text" id="letter_guess"><br><br>
+                <input class="toRemove" type="text" id="letter_guess"><br><br>
                 <button onclick="makeGuess()">Submit Guess</button>
+            
+            <br><br><br>
+            <a id="tryAgain" href="/"></a>
             </div>
-            <br>
         </main>
     <footer>
         <p><strong>Guess the Word</strong>, game made by Ben Tindal</p>
