@@ -80,7 +80,7 @@ function checkIfCorrect(guessArray, wordArray){
   if(greensFound == 5){
     endGame(1) // Win
   }
-  if(rowPointer >= 6){
+  else if(rowPointer >= 6){
     endGame(0) // Loss
   }
 }
