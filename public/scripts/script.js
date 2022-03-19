@@ -96,6 +96,7 @@ function endGame(state){
     message.innerHTML = "Congratulations!";
     message.classList.add("green")
   }
+  document.getElementById('letter_guess').disabled = True
   document.getElementById("tryAgain").innerHTML = "<b>Try Again</b>"
 }
 
