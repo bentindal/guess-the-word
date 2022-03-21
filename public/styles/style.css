@@ -78,6 +78,10 @@ footer {
     color: rgb(255, 255, 255);
 }
 
+#dictCreds{
+    color: white;
+}
+
 /* Colour classes */
 #wordCanvas canvas.orange {
     background-color: sandybrown;
