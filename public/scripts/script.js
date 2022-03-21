@@ -87,7 +87,7 @@ function checkIfCorrect(guessArray, wordArray){
 
 function endGame(state){
   console.log("Game state " + state)
-  const message = document.getElementById("guess_hint")
+  const message = document.getElementById("guessHint")
   if(state == 0){ // Loss
     message.innerHTML = "Unlucky! The word was <b>"+word+"</b>";
     message.classList.add("red")
@@ -97,7 +97,9 @@ function endGame(state){
     message.classList.add("green")
   }
   document.getElementById("guessDiv").remove()
-  document.getElementById("tryAgain").innerText = "Try Again"
+  var definitionText = document.getElementById("definitionText")
+  definitionText.innerHTML = "<i>"+definition+"</i>"
+  document.getElementById("tryAgain").innerHTML = "<b>Try Again</b>"
 }
 
 // Main ------------------------->

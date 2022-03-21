@@ -14,17 +14,21 @@
     </header>
         <main>
             <div id="wordCanvas">
-                <script>var word = "<%= @word %>"</script>
+                <script>
+                var word = "<%= @word %>"
+                var definition = "<%= @definition %>"
+                console.log(definition)
+                </script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
             <div id="hintDiv">
-            <strong><p id="guess_hint">Have a guess!</p></strong>
-            <a id="tryAgain" href="/"></a>
+                <strong><p id="guessHint"></p></strong>
+                <p id="definitionText"></p>
+                <a id="tryAgain" href="/"></a>
             </div>
             <div id="guessDiv">
                 <input type="text" id="letterGuess"><br><br>
                 <button id="guessButton" onclick="makeGuess()">Submit Guess</button>
-            
             </div>
         </main>
     <footer>

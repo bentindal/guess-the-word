@@ -8,6 +8,7 @@ require_rel "models"
 
 get "/" do
   word = Word.new
-  @word = word.newWord
+  @word = word.newWord.upcase
+  @definition = define(@word)
   erb :main
 end
