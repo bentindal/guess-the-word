@@ -17,13 +17,14 @@
                 <script>var word = "<%= @word %>"</script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
+            <div id="hintDiv">
             <strong><p id="guess_hint">Have a guess!</p></strong>
-            <div id="guess">
-                <input class="toRemove" type="text" id="letter_guess"><br><br>
-                <button onclick="makeGuess()">Submit Guess</button>
-            
-            <br><br>
             <a id="tryAgain" href="/"></a>
+            </div>
+            <div id="guessDiv">
+                <input type="text" id="letterGuess"><br><br>
+                <button id="guessButton" onclick="makeGuess()">Submit Guess</button>
+            
             </div>
         </main>
     <footer>

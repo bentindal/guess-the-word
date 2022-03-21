@@ -46,7 +46,7 @@ function wordToArray(word){
 
 function makeGuess(){
   console.log("makeGuess")
-  var inputbox = document.getElementById('letter_guess')
+  var inputbox = document.getElementById('letterGuess')
   var guess = inputbox.value
   guess = guess.toUpperCase()
   console.log("Guess: " + guess, " Word: " + word)
@@ -96,8 +96,8 @@ function endGame(state){
     message.innerHTML = "Congratulations!";
     message.classList.add("green")
   }
-  document.getElementById('letter_guess').disabled = True
-  document.getElementById("tryAgain").innerHTML = "<b>Try Again</b>"
+  document.getElementById("guessDiv").remove()
+  document.getElementById("tryAgain").innerText = "Try Again"
 }
 
 // Main ------------------------->
