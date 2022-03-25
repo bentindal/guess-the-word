@@ -1,4 +1,4 @@
 # WordGuessingGame
 Guess the 5 letter word! Runs using Sinatra web framework on Ruby
 
-Demo @ <a href="www.btindal.uk/">here</a>
+Demo can be found <a href="http://www.btindal.uk/">here</a>
