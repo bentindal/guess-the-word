@@ -53,9 +53,10 @@ canvas{
 
 #guessDiv button{
     background-color: rgb(255, 255, 255);
-    width: 35px;
-    height: 45px;
+    width: 30px;
+    height: 40px;
     font-size: 1em;
+    margin: 1px;
 }
 
 #guessDiv #submitButton{
