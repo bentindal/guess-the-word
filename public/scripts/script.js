@@ -30,6 +30,8 @@ function drawWord(canvas, letter) {
 function drawGuess(theGuess){
   var array = wordToArray(theGuess)
   for(var i=0; i<word.length; i++){
+    var canv = document.getElementById("canv-"+rowPointer+i)
+    canv.getContext("2d").clearRect(0, 0, canv.width, canv.height);
     drawWord(document.getElementById("canv-"+rowPointer+i).getContext("2d"), array[i])
   }
 }
@@ -44,15 +46,20 @@ function wordToArray(word){
   return array
 }
 
+function validateGuess(guess){
+  if (guess.length != 5){return false;} // Guess must be 5 letters long
+  return true;
+}
 function makeGuess(){
   console.log("makeGuess")
-  var inputbox = document.getElementById('letterGuess')
-  var guess = inputbox.value
+  var guess = letterGuess
   guess = guess.toUpperCase()
   console.log("Guess: " + guess, " Word: " + word)
-  // Check if VALID guess
-  drawGuess(guess);
-  checkIfCorrect(wordToArray(guess), correctArray);
+  if (validateGuess(guess)){
+    letterGuess = ""
+    drawGuess(guess);
+    checkIfCorrect(wordToArray(guess), correctArray);
+  }
 }
 
 function checkIfCorrect(guessArray, wordArray){
@@ -63,6 +70,9 @@ function checkIfCorrect(guessArray, wordArray){
       if (guessArray[y] == wordArray[x]){
         console.log(guessArray[y] +" yellow")
         document.getElementById("canv-"+rowPointer+y).classList.add("orange");
+      }
+      else{
+        document.getElementById("canv-"+rowPointer+y).classList.add("grey");
       }
     }
   }

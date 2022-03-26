@@ -49,8 +49,27 @@ canvas{
 /* guessing section */
 #guessDiv{
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
+}
+
+#guessDiv button{
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 45px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#guessDiv #submitButton{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(77, 255, 101);
+    margin-top: 40px;
+}
+
+#guessDiv #backButton{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 151, 119);
 }
 
 #hintDiv{
@@ -67,12 +86,12 @@ canvas{
 /* Footer and below! */
 footer {
     position: fixed;
-    padding: 10px 10px 0px 10px;
+    padding: 5px 10px 5px 0px;
     bottom: 0;
     width: 100%;
     /* Height of the footer*/ 
     height: 40px;
-    font-size: 0.75em;
+    font-size: 0.6em;
     text-align: center;
     background-color: #1e4366;
     color: rgb(255, 255, 255);
@@ -95,6 +114,10 @@ footer {
     background-color: rgb(64, 194, 97);
 }
 
+.grey {
+    background-color: rgb(190, 190, 190);
+}
+
 .red {
     background-color: rgb(165, 53, 33);
 }
@@ -109,15 +132,33 @@ footer {
     body header {
         font-size: 2rem;
     }
+    #guessDiv button{
+        background-color: rgb(255, 255, 255);
+        width: 45px;
+        height: 60px;
+        font-size: 1em;
+    }
+    #guessDiv #submitButton{
+        margin-top: 20px;
+    }
+    footer{
+        font-size: 0.75em;
+    }
 }
 
 @media screen and (min-width: 700px){
     canvas {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         background-color: rgb(255, 255, 255);
     }
     body header {
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    #guessDiv button{
+        background-color: rgb(255, 255, 255);
+        width: 50px;
+        height: 60px;
+        font-size: 1em;
     }
 }

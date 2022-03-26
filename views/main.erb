@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h2>Guess the Wordz</h2>
+        <h3>Guess the Word</h3>
     </header>
         <main>
             <div id="wordCanvas">
@@ -27,8 +27,11 @@
                 <a id="tryAgain" href="/"></a>
             </div>
             <div id="guessDiv">
-                <input type="text" id="letterGuess"><br><br>
-                <button id="guessButton" onclick="makeGuess()">Submit Guess</button>
+                <script type="text/javascript" src="scripts/keyboard.js"></script>
+                <div>
+                    <button id="submitButton" onClick='makeGuess()'>Submit</button>
+                    <button id="backButton" onClick='removeLetterFromGuess()'>Back</button>
+                </div>
             </div>
         </main>
     <footer>
