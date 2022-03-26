@@ -9,7 +9,7 @@ body {
 body header {
     margin: 0px auto;
     font-family: "Arial", serif;
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-align: center;
 }
 
@@ -39,8 +39,8 @@ canvas{
     margin-right: 5px;
     margin-bottom: 2px;
     outline: solid;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     outline-width: 2px;
     outline-color: rgb(0, 0, 0);
     background-color:rgb(255, 255, 255);
@@ -52,25 +52,26 @@ canvas{
 }
 
 #guessDiv button{
+    border-style: solid;
     background-color: rgb(255, 255, 255);
-    width: 30px;
-    height: 40px;
-    font-size: 1em;
+    width: 10px;
+    height: 20px;
+    font-size: 0.5em;
     margin: 1px;
     text-align: center;
     color: black;
 }
 
 #guessDiv #submitButton{
-    width: 100px;
-    height: 50px;
+    width: 40%;
+    height: 30px;
     background-color: rgb(77, 255, 101);
     margin-top: 5px;
 }
 
 #guessDiv #backButton{
-    width: 100px;
-    height: 50px;
+    width: 40%;
+    height: 30px;
     background-color: rgb(255, 151, 119);
 }
 
@@ -124,35 +125,51 @@ footer {
     background-color: rgb(165, 53, 33);
 }
 
-/* Custom settings for different screen widths */
+/* Custom settings for different screen widths SMALLEST TO LARGEST*/
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 320px){ /* Normal Phone */
     canvas {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
     body header {
-        font-size: 2rem;
+        font-size: 1rem;
     }
+
     #guessDiv button{
         background-color: rgb(255, 255, 255);
-        width: 45px;
-        height: 60px;
+        width: 28px;
+        height: 38px;
         font-size: 1em;
     }
-    #guessDiv #submitButton{
-        margin-top: 20px;
-    }
     footer{
-        font-size: 0.75em;
+        font-size: 10px;
     }
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 414px){ /* larger phone */
     canvas {
         width: 60px;
         height: 60px;
+    }
+    body header {
+        font-size: 1rem;
+    }
+    #guessDiv button{
         background-color: rgb(255, 255, 255);
+        width: 37px;
+        height: 50px;
+        font-size: 1em;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px){ /* S Laptop */
+    canvas {
+        width: 60px;
+        height: 60px;
     }
     body header {
         font-size: 1rem;
@@ -160,7 +177,10 @@ footer {
     #guessDiv button{
         background-color: rgb(255, 255, 255);
         width: 50px;
-        height: 60px;
-        font-size: 1em;
+        height: 65px;
+        font-size: 1.2em;
+    }
+    footer{
+        font-size: 12px;
     }
 }
