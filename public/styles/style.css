@@ -57,6 +57,8 @@ canvas{
     height: 40px;
     font-size: 1em;
     margin: 1px;
+    text-align: center;
+    color: black;
 }
 
 #guessDiv #submitButton{
