@@ -67,12 +67,15 @@ function checkIfCorrect(guessArray, wordArray){
   var x = 0;
   for(var y=0; y<wordArray.length; y++){
     for(x=0; x<wordArray.length; x++){
-      if (guessArray[y] == wordArray[x]){
-        console.log(guessArray[y] +" yellow")
-        document.getElementById("canv-"+rowPointer+y).classList.add("orange");
+      if (guessArray[y] != wordArray[x]){
+        document.getElementById("canv-"+rowPointer+y).classList.add("grey");
+        colourLetter(guessArray[y], "grey")
+        
       }
       else{
-        document.getElementById("canv-"+rowPointer+y).classList.add("grey");
+        console.log(guessArray[y] +" yellow")
+        document.getElementById("canv-"+rowPointer+y).classList.add("orange");
+        colourLetter(guessArray[y], "orange")
       }
     }
   }
@@ -81,6 +84,7 @@ function checkIfCorrect(guessArray, wordArray){
     if (guessArray[x] == wordArray[x]){
       console.log(guessArray[x] +" green")
       document.getElementById("canv-"+rowPointer+x).classList.add("green");
+      colourLetter(guessArray[x], "green")
       greensFound += 1
     }
   }

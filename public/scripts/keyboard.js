@@ -4,6 +4,7 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
   for(var x=0; x<rowOne.length; x++){
     button = document.createElement("button")
     button.setAttribute("onClick", "addToGuess('"+ rowOne[x] + "')")
+    button.setAttribute("id", "letter-"+rowOne[x])
     button.innerText = rowOne[x]
     start.appendChild(button);
   }
@@ -11,6 +12,7 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
   for(var y=0; y<rowTwo.length; y++){
     button = document.createElement("button")
     button.setAttribute("onClick", "addToGuess('"+ rowTwo[y] + "')")
+    button.setAttribute("id", "letter-"+rowTwo[y])
     button.innerText = rowTwo[y]
     start.appendChild(button);
   }
@@ -18,6 +20,7 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
   for(var z=0; z<rowThree.length; z++){
     button = document.createElement("button")
     button.setAttribute("onClick", "addToGuess('"+ rowThree[z] + "')")
+    button.setAttribute("id", "letter-"+rowThree[z])
     button.innerText = rowThree[z]
     start.appendChild(button);
   }
@@ -34,6 +37,34 @@ function addToGuess(letter){
 function removeLetterFromGuess(){
   letterGuess = letterGuess.substring(0,letterGuess.length - 1)
   drawGuess(letterGuess)
+}
+
+function colourLetter(letter, colour){
+  const keyboard = document.getElementById("letter-"+letter)
+  if (colour == "green"){
+    if (keyboard.classList.contains("orange")){
+      keyboard.classList.remove("orange")
+    }
+    if (keyboard.classList.contains("grey")){
+      keyboard.classList.remove("grey")
+    }
+    keyboard.classList.add("green");
+  }
+  if (colour == "orange"){
+    if (keyboard.classList.contains("grey")){
+      keyboard.classList.remove("grey")
+    }
+    keyboard.classList.add("orange");
+  }
+  if (colour == "grey"){
+    if (keyboard.classList.contains("orange")){
+      return
+    }
+    else if (keyboard.classList.contains("green")){
+      return
+    }
+    else{keyboard.classList.add("grey");}
+  }
 }
 
 // Main ------------------------->
