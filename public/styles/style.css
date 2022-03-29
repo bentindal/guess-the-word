@@ -83,6 +83,14 @@ canvas{
     border-radius: 10px;
 }
 
+#controlButtons{
+    margin: 15px;
+}
+
+#guessHint{
+    font-size: 1.5em;
+}
+
 #hintDiv{
     text-align: center;
     color: white;
