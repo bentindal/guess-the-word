@@ -51,10 +51,8 @@ function validateGuess(guess){
   return true;
 }
 function makeGuess(){
-  console.log("makeGuess")
   var guess = letterGuess
   guess = guess.toUpperCase()
-  console.log("Guess: " + guess, " Word: " + word)
   if (validateGuess(guess)){
     letterGuess = ""
     drawGuess(guess);
@@ -63,7 +61,6 @@ function makeGuess(){
 }
 
 function checkIfCorrect(guessArray, wordArray){
-  console.log("checkifcorrect")
   var x = 0;
   for(var y=0; y<wordArray.length; y++){
     for(x=0; x<wordArray.length; x++){
@@ -73,7 +70,6 @@ function checkIfCorrect(guessArray, wordArray){
         
       }
       else{
-        console.log(guessArray[y] +" yellow")
         document.getElementById("canv-"+rowPointer+y).classList.add("orange");
         colourLetter(guessArray[y], "orange")
       }
@@ -82,7 +78,6 @@ function checkIfCorrect(guessArray, wordArray){
   var greensFound = 0
   for(x=0; x<wordArray.length; x++){
     if (guessArray[x] == wordArray[x]){
-      console.log(guessArray[x] +" green")
       document.getElementById("canv-"+rowPointer+x).classList.add("green");
       colourLetter(guessArray[x], "green")
       greensFound += 1
@@ -90,7 +85,6 @@ function checkIfCorrect(guessArray, wordArray){
   }
 
   rowPointer += 1
-  console.log("Row "+rowPointer+" Greens "+greensFound)
   if(greensFound == 5){
     endGame(1) // Win
   }
@@ -100,7 +94,6 @@ function checkIfCorrect(guessArray, wordArray){
 }
 
 function endGame(state){
-  console.log("Game state " + state)
   const message = document.getElementById("guessHint")
   if(state == 0){ // Loss
     message.innerHTML = "Unlucky! The word was <b>"+word+"</b>";
