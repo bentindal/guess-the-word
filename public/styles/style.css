@@ -62,7 +62,9 @@ canvas{
     margin: 1px;
     text-align: center;
     color: black;
+    display: inline-block;
 }
+
 
 #guessDiv #submitButton{
     width: 30%;
