@@ -93,11 +93,9 @@ canvas{
 
 /* Footer and below! */
 footer {
-    position: fixed;
     padding: 5px 10px 5px 0px;
     bottom: 0;
     width: 100%;
-    /* Height of the footer*/ 
     height: 40px;
     font-size: 0.6em;
     text-align: center;
@@ -171,6 +169,7 @@ footer {
     }
     footer{
         font-size: 12px;
+        position: fixed;
     }
 }
 
@@ -189,5 +188,6 @@ footer {
     }
     footer{
         font-size: 12px;
+        position: fixed;
     }
 }
