@@ -46,6 +46,25 @@ function wordToArray(word){
   return array
 }
 
+function clearBoard(){
+  for(rowPointer=0;rowPointer<=5; rowPointer++){
+    drawGuess("     ")
+    var canvPointer;
+    for(var letterPointer=0;letterPointer<=4; letterPointer++){
+      canvPointer = document.getElementById("canv-"+rowPointer+letterPointer)
+      if (canvPointer.classList.contains("orange")){
+        canvPointer.classList.remove("orange")
+      }
+      if (canvPointer.classList.contains("green")){
+        canvPointer.classList.remove("green")
+      }
+      if (canvPointer.classList.contains("grey")){
+        canvPointer.classList.remove("grey")
+      }
+    }
+  }
+}
+
 function validateGuess(guess){
   if (guess.length != 5){return false;} // Guess must be 5 letters long
   return true;
@@ -67,7 +86,6 @@ function checkIfCorrect(guessArray, wordArray){
       if (guessArray[y] != wordArray[x]){
         document.getElementById("canv-"+rowPointer+y).classList.add("grey");
         colourLetter(guessArray[y], "grey")
-        
       }
       else{
         document.getElementById("canv-"+rowPointer+y).classList.add("orange");
@@ -106,7 +124,23 @@ function endGame(state){
   document.getElementById("guessDiv").remove()
   var definitionText = document.getElementById("definitionText")
   definitionText.innerHTML = "<i>"+definition+"</i>"
-  document.getElementById("tryAgain").innerHTML = "<b>Try Again</b>"
+  var tryAgainButton = document.getElementById("tryAgain")
+  tryAgainButton.innerHTML = "<b>Try Again</b>"
+  tryAgainButton.removeAttribute("hidden")
+}
+
+function restartGame(){
+  clearBoard()
+  rowPointer = 0;
+  document.getElementById("definitionText").innerHTML = ""
+  document.getElementById("guessHint").innerHTML = ""
+  var tryAgainButton = document.getElementById("tryAgain")
+  tryAgainButton.innerHTML = ""
+  tryAgainButton.setAttribute("hidden", "hidden")
+  var newDiv = document.createElement("div")
+  newDiv.setAttribute("id", "guessDiv")
+  document.getElementById("hintDiv").appendChild(newDiv)
+  generateKeyboard(ROW1, ROW2, ROW3);
 }
 
 // Main ------------------------->

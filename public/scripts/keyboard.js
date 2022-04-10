@@ -37,7 +37,7 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
   button = document.createElement("button")
   button.setAttribute("onClick", "makeGuess()")
   button.setAttribute("id", "submitButton")
-  button.innerHTML = "<strong>Submit</strong>"
+  button.innerHTML = "<strong>Enter</strong>"
   start.appendChild(button);
 }
 
