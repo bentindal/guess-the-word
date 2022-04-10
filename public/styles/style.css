@@ -56,10 +56,11 @@ canvas{
     border-color: rgb(0, 0, 0);
     border-radius: 5px;
     border-width: 2px;
-    width: 10px;
-    height: 20px;
+    width: 5px;
+    height: 10px;
     font-size: 0.5em;
     margin: 1px;
+    padding: 10px;
     text-align: center;
     color: black;
     display: inline-block;
@@ -67,24 +68,16 @@ canvas{
 
 
 #guessDiv #submitButton{
-    width: 30%;
-    height: 40px;
     background-color: rgb(77, 255, 101);
-    margin-top: 5px;
 }
 
 #guessDiv #backButton{
-    width: 30%;
-    height: 40px;
     background-color: rgb(255, 151, 119);
 }
 
 #guessDiv #backButton, #guessDiv #submitButton{
-    border-radius: 10px;
-}
-
-#controlButtons{
-    margin: 15px;
+    width: 5em;
+    padding: 5px;
 }
 
 #guessHint{
@@ -156,8 +149,8 @@ footer {
     }
 
     #guessDiv button{
-        width: 28px;
-        height: 38px;
+        width: 23px;
+        height: 32px;
         font-size: 1em;
     }
     footer{
