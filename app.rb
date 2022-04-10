@@ -10,6 +10,6 @@ get "/" do
   word = Word.new
   @word = word.newWord.upcase
   @definition = define(@word)
-  puts "[GAME] with #{@word} : #{@definition}"
+  puts "[GAME] #{@word} : #{@definition}"
   erb :main
 end

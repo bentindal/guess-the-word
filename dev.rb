@@ -10,6 +10,6 @@ get "/" do
   word = Word.new
   @word = "TABLE"
   @definition = "A smooth topped object designed for holding items on it"
-  puts "[GAME] with #{@word} : #{@definition}"
+  puts "[GAME] #{@word} : #{@definition}"
   erb :main
 end
