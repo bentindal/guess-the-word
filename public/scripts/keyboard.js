@@ -1,6 +1,7 @@
 function generateKeyboard(rowOne, rowTwo, rowThree){
   start = document.getElementById("guessDiv")
   var button = null;
+
   for(var x=0; x<rowOne.length; x++){
     button = document.createElement("button")
     button.setAttribute("onClick", "addToGuess('"+ rowOne[x] + "')")
@@ -8,6 +9,7 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
     button.innerText = rowOne[x]
     start.appendChild(button);
   }
+
   start.appendChild(document.createElement("div"));
   for(var y=0; y<rowTwo.length; y++){
     button = document.createElement("button")
@@ -16,7 +18,14 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
     button.innerText = rowTwo[y]
     start.appendChild(button);
   }
+
   start.appendChild(document.createElement("div"));
+  button = document.createElement("button")
+  button.setAttribute("onClick", "removeLetterFromGuess()")
+  button.setAttribute("id", "backButton")
+  button.innerHTML = "<strong>Back</strong>"
+  start.appendChild(button);
+
   for(var z=0; z<rowThree.length; z++){
     button = document.createElement("button")
     button.setAttribute("onClick", "addToGuess('"+ rowThree[z] + "')")
@@ -24,6 +33,12 @@ function generateKeyboard(rowOne, rowTwo, rowThree){
     button.innerText = rowThree[z]
     start.appendChild(button);
   }
+
+  button = document.createElement("button")
+  button.setAttribute("onClick", "makeGuess()")
+  button.setAttribute("id", "submitButton")
+  button.innerHTML = "<strong>Submit</strong>"
+  start.appendChild(button);
 }
 
 function addToGuess(letter){
