@@ -2,14 +2,14 @@ require "sinatra"
 require "sinatra/reloader"
 require "require_all"
 
-set :port, 80
+set :port, 1393
 
 require_rel "models"
 
 get "/" do
   word = Word.new
-  @word = word.newWord.upcase
-  @definition = define(@word)
+  @word = "TABLE"
+  @definition = "A smooth topped object designed for holding items on it"
   puts "[GAME] with #{@word} : #{@definition}"
   erb :main
 end
