@@ -1,7 +1,8 @@
-#!/bin/bash         
+#!/bin/bash
+echo "Starting Automatic Git Pulls!"   
 while true
 do
-    echo "Starting auto git pulls every 10 seconds..."
+    echo "Initiating pull..."
     git pull
     sleep 10
 done
