@@ -128,8 +128,12 @@ footer {
     background-color: rgb(64, 194, 97);
 }
 
-#guessDiv .grey, .grey {
+#wordCanvas .grey{
     background-color: rgb(190, 190, 190);
+}
+
+#guessDiv .grey{
+    background-color: rgb(140, 140, 140);
 }
 
 .red {
@@ -185,8 +189,8 @@ footer {
         font-size: 1rem;
     }
     #guessDiv button{
-        width: 50px;
-        height: 65px;
+        width: 45px;
+        height: 55px;
         font-size: 1.2em;
     }
     footer{
