@@ -10,8 +10,8 @@
 
 <body>
     <header>
-        <h5 id="header2">SCORE</h5>
-        <h1 id="header">0</h1>
+        <h5 id="header2">&nbsp</h5>
+        <h1 id="header">Guess the Word</h1>
     </header>
         <main>
             <div id="wordCanvas">
@@ -22,11 +22,11 @@
                 </script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
-            <div id="hintDiv">
+            <div id="hintDiv" hidden>
                 <strong><p id="guessHint"></p></strong>
                 <p id="definitionText"></p>
                 <form action="/" method="post">
-                    <button name="endGameButton" id="tryAgain" hidden><%=$score%></button>
+                    <button name="endGameButton" id="tryAgain"><%=$score%></button>
                 </form>
             </div>
             <div id="guessDiv">

@@ -69,6 +69,7 @@ function validateGuess(guess){
   if (guess.length != 5){return false;} // Guess must be 5 letters long
   return true;
 }
+
 function makeGuess(){
   var guess = letterGuess
   guess = guess.toUpperCase()
@@ -129,7 +130,7 @@ function endGame(state){
   var tryAgainButton = document.getElementById("tryAgain")
   tryAgainButton.innerHTML = "<b>Try Again</b>"
   tryAgainButton.setAttribute("value", score)
-  tryAgainButton.removeAttribute("hidden")
+  document.getElementById("hintDiv").removeAttribute("hidden")
 }
 
 function updateScore(amount){
@@ -140,20 +141,6 @@ function updateScore(amount){
     document.getElementById("header2").innerHTML = "<i>SCORE</i>"
     document.getElementById('header').innerText = score}
 
-}
-
-function restartGame(){
-  clearBoard()
-  rowPointer = 0;
-  document.getElementById("definitionText").innerHTML = ""
-  document.getElementById("guessHint").innerHTML = ""
-  var tryAgainButton = document.getElementById("tryAgain")
-  tryAgainButton.innerHTML = ""
-  tryAgainButton.setAttribute("hidden", "hidden")
-  var newDiv = document.createElement("div")
-  newDiv.setAttribute("id", "guessDiv")
-  document.getElementById("hintDiv").appendChild(newDiv)
-  generateKeyboard(ROW1, ROW2, ROW3);
 }
 
 // Main ------------------------->
