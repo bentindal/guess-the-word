@@ -7,7 +7,6 @@ set :port, 80
 require_rel "models"
 
 def init
-  puts "init called"
   @word = newWord().upcase
   @definition = define(@word)
 end

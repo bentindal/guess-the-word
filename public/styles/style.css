@@ -8,9 +8,15 @@ body {
 
 body header {
     margin: 0px auto;
-    font-family: "Arial", serif;
-    font-size: 0.75rem;
     text-align: center;
+}
+
+#header2, #header{
+    margin: 5px;
+}
+
+#header{
+    font-size: 3em;
 }
 
 nav {
@@ -60,7 +66,7 @@ canvas{
     height: 10px;
     font-size: 0.5em;
     margin: 1px;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     color: black;
     background-color: white;
@@ -182,8 +188,8 @@ footer {
 
 @media screen and (min-width: 1024px){ /* S Laptop */
     canvas {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
     }
     body header {
         font-size: 1rem;

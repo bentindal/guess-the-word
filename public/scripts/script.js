@@ -133,9 +133,13 @@ function endGame(state){
 }
 
 function updateScore(amount){
+  console.log("Score = " + score + " + " + amount)
   score += amount
-  console.log("Score updated to: " + score)
-  document.getElementById('header').innerText = "Score: " + score
+  console.log("= " + score)
+  if(score != 0){
+    document.getElementById("header2").innerHTML = "<i>SCORE</i>"
+    document.getElementById('header').innerText = score}
+
 }
 
 function restartGame(){
