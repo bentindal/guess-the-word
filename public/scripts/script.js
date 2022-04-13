@@ -114,19 +114,28 @@ function checkIfCorrect(guessArray, wordArray){
 function endGame(state){
   const message = document.getElementById("guessHint")
   if(state == 0){ // Loss
-    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>";
+    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>, final score was " + score;
+    score = 0
     message.classList.add("red")
   }
   else{ // Win
     message.innerHTML = "Congratulations!";
     message.classList.add("green")
+    updateScore((6-rowPointer)*10)
   }
   document.getElementById("guessDiv").remove()
   var definitionText = document.getElementById("definitionText")
   definitionText.innerHTML = "<i>"+definition+"</i>"
   var tryAgainButton = document.getElementById("tryAgain")
   tryAgainButton.innerHTML = "<b>Try Again</b>"
+  tryAgainButton.setAttribute("value", score)
   tryAgainButton.removeAttribute("hidden")
+}
+
+function updateScore(amount){
+  score += amount
+  console.log("Score updated to: " + score)
+  document.getElementById('header').innerText = "Score: " + score
 }
 
 function restartGame(){
@@ -144,6 +153,7 @@ function restartGame(){
 }
 
 // Main ------------------------->
+updateScore(0)
 var canvasArray = createBoard(5, 6);
 var rowPointer = 0;
 const correctArray = wordToArray(word); // Array of the word to guess

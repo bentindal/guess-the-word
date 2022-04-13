@@ -10,20 +10,23 @@
 
 <body>
     <header>
-        <h3>Guess the Word</h3>
+        <h3 id="header">Guess the Word</h3>
     </header>
         <main>
             <div id="wordCanvas">
                 <script>
                 var word = "<%= @word %>"
                 var definition = "<%= @definition %>"
+                var score = <%= $score %>
                 </script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
             <div id="hintDiv">
                 <strong><p id="guessHint"></p></strong>
                 <p id="definitionText"></p>
-                <button id="tryAgain" onclick="restartGame()" hidden></button>
+                <form action="/update-score" method="post">
+                    <button name="nGameButton" id="tryAgain" hidden><%=$score%></button>
+                </form>
             </div>
             <div id="guessDiv">
                 <script type="text/javascript" src="scripts/keyboard.js"></script>

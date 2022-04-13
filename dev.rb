@@ -6,10 +6,22 @@ set :port, 1393
 
 require_rel "models"
 
+def init
+  puts "init called"
+  @word = newWord().upcase
+  @definition = define(@word)
+end
+
 get "/" do
-  word = Word.new
-  @word = "TABLE"
-  @definition = "A smooth topped object designed for holding items on it"
-  puts "[GAME] #{@word} : #{@definition}"
+  init()
+  $score = "0"
+  puts "[NEW GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
+  erb :main
+end
+
+post "/update-score" do
+  init()
+  $score = params["nGameButton"].to_i
+  puts "[CONT GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
   erb :main
 end
