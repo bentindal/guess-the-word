@@ -19,9 +19,9 @@ get "/" do
   erb :main
 end
 
-post "/update-score" do
+post "/" do
   init()
-  $score = params["nGameButton"].to_i
+  $score = params["endGameButton"].to_i
   puts "[CONT GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
   erb :main
 end
