@@ -121,7 +121,7 @@ function endGame(state){
   else{ // Win
     message.innerHTML = "Congratulations!";
     message.classList.add("green")
-    updateScore((6-rowPointer)*10)
+    updateScore((7-rowPointer)*10)
   }
   document.getElementById("guessDiv").remove()
   var definitionText = document.getElementById("definitionText")
