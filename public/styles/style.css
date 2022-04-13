@@ -94,10 +94,10 @@ canvas{
 #tryAgain{
     color: #1e4366;
     background-color:rgb(255, 255, 255);
-    font-size: 1.2em;  
+    font-size: 1em;  
     border-color: black;
-    width: 30%;
-    height: 40px;
+    width: 20%;
+    height: 30px;
     border-radius: 5px;
 }
 
@@ -119,23 +119,15 @@ footer {
 }
 
 /* Colour classes */
-#wordCanvas canvas.orange {
+#wordCanvas canvas.orange, #guessDiv .orange, .orange {
     background-color: sandybrown;
 }
 
-#wordCanvas canvas.green {
+#wordCanvas canvas.green, #guessDiv .green, .green {
     background-color: rgb(64, 194, 97);
 }
 
-.orange {
-    background-color: sandybrown;
-}
-
-.green {
-    background-color: rgb(64, 194, 97);
-}
-
-.grey {
+#guessDiv .grey, .grey {
     background-color: rgb(190, 190, 190);
 }
 
@@ -184,8 +176,8 @@ footer {
 
 @media screen and (min-width: 1024px){ /* S Laptop */
     canvas {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
     body header {
         font-size: 1rem;
