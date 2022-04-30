@@ -66,7 +66,10 @@ function clearBoard(){
 }
 
 function validateGuess(guess){
-  if (guess.length != 5){return false;} // Guess must be 5 letters long
+  // Guess must be 5 letters long
+  if (guess.length != 5){
+    return false;
+  }
   return true;
 }
 
@@ -131,25 +134,22 @@ function endGame(state){
   tryAgainButton.innerHTML = "<b>Try Again</b>"
   tryAgainButton.setAttribute("value", score)
   document.getElementById("hintDiv").removeAttribute("hidden")
-  if (score == -1){
+  if (score == null){
     tryAgainButton.remove()
   }
 }
 
 function updateScore(amount){
-  if (score > -1){
+  if(score != null){
     console.log("Score = " + score + " + " + amount)
     score += amount
     console.log("= " + score)
-    if(score != 0){
-      document.getElementById("header2").innerHTML = "<i>SCORE</i>"
-      document.getElementById('header').innerText = score
-    }
+    document.getElementById("header2").innerHTML = "<i>SCORE</i>"
+    document.getElementById('header').innerText = score
   }
 }
 
 // Main ------------------------->
-updateScore(0)
 var canvasArray = createBoard(5, 6);
 var rowPointer = 0;
 const correctArray = wordToArray(word); // Array of the word to guess
