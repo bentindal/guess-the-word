@@ -39,3 +39,7 @@ post "/" do
   puts "[CONT GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
   erb :main
 end
+
+error 404 do
+  erb :pagenotfound
+end
