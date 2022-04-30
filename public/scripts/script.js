@@ -131,6 +131,9 @@ function endGame(state){
   tryAgainButton.innerHTML = "<b>Try Again</b>"
   tryAgainButton.setAttribute("value", score)
   document.getElementById("hintDiv").removeAttribute("hidden")
+  if (score == -1){
+    tryAgainButton.remove()
+  }
 }
 
 function updateScore(amount){
