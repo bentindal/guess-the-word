@@ -134,13 +134,15 @@ function endGame(state){
 }
 
 function updateScore(amount){
-  console.log("Score = " + score + " + " + amount)
-  score += amount
-  console.log("= " + score)
-  if(score != 0){
-    document.getElementById("header2").innerHTML = "<i>SCORE</i>"
-    document.getElementById('header').innerText = score}
-
+  if (score > -1){
+    console.log("Score = " + score + " + " + amount)
+    score += amount
+    console.log("= " + score)
+    if(score != 0){
+      document.getElementById("header2").innerHTML = "<i>SCORE</i>"
+      document.getElementById('header').innerText = score
+    }
+  }
 }
 
 // Main ------------------------->

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css?rnd=123">
-    <link rel="icon" href="images/wordlogo.ico">
-    <title>Guess the Word</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../images/wordlogo.ico">
+    <title>Custom Game</title>
 </head>
 
 <body>
     <header>
-        <h5 id="header2">&nbsp</h5>
+        <h5 id="header2">CUSTOM GAME</h5>
         <h1 id="header">Guess the Word</h1>
     </header>
         <main>
             <div id="wordCanvas">
                 <script>
                 var score = -1
+                var customID = "<%= @customID %>"
                 var word = "<%= @word %>"
                 var definition = "<%= @definition %>"
-                var score = <%= $score %>
                 </script>
-                <script type="text/javascript" src="scripts/script.js"></script>
+                <script type="text/javascript" src="../scripts/script.js"></script>
             </div>
             <div id="hintDiv" hidden>
                 <strong><p id="guessHint"></p></strong>
@@ -31,13 +31,14 @@
                 </form>
             </div>
             <div id="guessDiv">
-                <script type="text/javascript" src="scripts/keyboard.js"></script>
+                <script type="text/javascript" src="../scripts/keyboard.js"></script>
             </div>
         </main>
     <footer>
         <p><strong>Guess the Word</strong>, game made by Ben Tindal, definitions scraped from <a id="dictCreds" href="http://www.vocabulary.com/dictionary/">here</a></p>
     </footer>
 </body>
+<script>console.log("hello")</script>
 
 
 
