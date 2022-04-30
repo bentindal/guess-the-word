@@ -1,0 +1,5 @@
+# Logfile created on 2022-04-30 16:08:31 +0100 by logger.rb/v1.5.0
+I, [2022-04-30T16:08:31.708030 #76883]  INFO -- : (0.002466s) PRAGMA foreign_keys = 1
+I, [2022-04-30T16:08:31.708190 #76883]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
+I, [2022-04-30T16:08:40.282516 #76883]  INFO -- : (0.004271s) SELECT sqlite_version()
+I, [2022-04-30T16:08:40.284669 #76883]  INFO -- : (0.001903s) SELECT * FROM `customgames` WHERE (`id` = '12345')
