@@ -23,6 +23,22 @@ body header {
     margin: 5px;
 }
 
+.rightSide, .leftSide{
+    background-color: rgb(45, 45, 69);
+    margin-left: 0em;
+    border-style: solid;
+    color: white;
+}
+header .rightSide{
+    text-align: right;
+    float: right;
+}
+
+header .leftSide{
+    text-align: left;
+    float: left;
+}
+
 #header{
     font-size: 1.5em;
 }
@@ -72,8 +88,8 @@ canvas{
     border-color: rgb(0, 0, 0);
     border-radius: 5px;
     border-width: 2px;
-    width: 10px;
-    height: 20px;
+    width: 20px;
+    height: 30px;
     font-size: 0.6em;
     margin: 1px;
     padding: 0px;
@@ -208,8 +224,8 @@ footer {
     }
 
     #guessDiv button{
-        width: 23px;
-        height: 33px;
+        width: 30px;
+        height: 35px;
         font-size: 1em;
     }
     footer{
