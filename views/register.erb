@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="">
+    <title>ACME - Register</title>
+</head>
+
+<body>
+    <header>
+        <p id="loggedInInfo"></p>
+        <script>var firstName = "<%= @name %>"</script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+        <img class="logo" src="../images/text.png"> 
+    </header>
+    <div id="wrapper">
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li>-</li>
+                <li id="current_page"><a href="login">Login</a></li>
+                <li>-</li>
+                <li><a href="blog">Blog</a></li>
+                <li>-</li>
+                <li><a href="profile">Profile</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="login-page">
+
+                <% if @submitted %>
+                    <% if @submit_msg %>
+                            <p><strong class="error"><%= @submit_msg %></strong></p>       
+                    <% end %>
+                <% end %>
+
+                <h2>Let's Make an Account!</h2>
+                <form>
+                    <p><label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <% if @user_error %>
+                        <br /><strong class="error"><%= @user_error %></strong>
+                    <% end %>
+                    </p>
+
+                    <p><label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required></p>
+
+                    <p><label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required></p>
+
+                    <p><label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required></p>
+                    
+                    <p>
+                        <label for="password">Password:</label>
+                        <input type="password" minlength="8" id="password" name="password" required>
+                        <% if @password_error %>
+                            <br /><br /><strong class="error"><%= @password_error %></strong>
+                        <% end %>
+                    </p>
+
+                    <p>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <% if @confirm_error %>
+                        <br /><br /><strong class="error"><%= @confirm_error %></strong>
+                    <% end %>
+                    <input type="password" minlength="8" id="confirm_password" name="confirm_password" required></p>
+
+                    <p>Passwords need to be a minimum of 8 characters and must contain a symbol, a number and an uppercase letter</p>
+
+                    <br>
+                    <p><b>Further Details</b></p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                        <% if @email_error %>
+                            <br /><strong class="error"><%= @email_error %></strong>
+                        <% end %>
+                    </p>
+
+                    <p>
+                        <label for="phonenumber">Phone Number:</label>
+                        <input type="tel" id="phonenumber" name="phonenumber" required>
+                        <% if @phone_error %>
+                            <br /><strong class="error"><%= @phone_error %></strong>
+                        <% end %>
+                    </p>
+
+                    <p>
+                        <label for="dateofbirth">Date of Birth (DD-MM-YYYY):</label>
+                        <input type="date" id="dateofbirth" name="dateofbirth">
+                        <% if @age_error %>
+                            <br /><strong class="error"><%= @age_error %></strong>
+                        <% end %>
+                    </p>
+
+                    <p><label for="university">University:</label>
+                    <input type="text" id="university" name="university"></p>
+
+                    <input type="submit" id="register_button" value="Sign Up">
+                    <br><br>
+                </form>
+            </div>
+        </main>
+
+
+    </div>
+    <footer>
+        <p><b>ACME</b>, a fictitious website by Group 1</p>
+    </footer>
+</body>
+</html>

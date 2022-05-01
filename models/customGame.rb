@@ -15,3 +15,11 @@ def findCustomGame(customID)
   puts "Here is the #{gameData[0]}"
   return gameData
 end
+
+def generateCustomGame(cWord, cDefinition)
+  matches = DB[:customgames].where(word: cWord)
+  cID = SecureRandom.random_number(99999).to_s.rjust(5, '0')
+  DB[:customgames] << {id: cID, customWord:cWord.upcase, customDefinition:cDefinition}
+  puts "Success!"
+  return cID
+end

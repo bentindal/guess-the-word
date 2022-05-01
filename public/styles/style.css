@@ -100,6 +100,47 @@ canvas{
     font-size: 1.5em;
 }
 
+#customDiv{
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 15%;
+    padding-bottom: 2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    width: 50%;
+    background-color:#28537c;
+}
+
+#customDiv label{
+    font-size: 0.75em;
+    color: rgb(255, 255, 255);
+}
+
+#customLink{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+#customLink p{
+    margin: 0;
+}
+
+#register_button{
+    border-radius: 5px;
+    border-style: solid;
+    color: black;
+    padding: 0.5em;
+}
+
 #hintDiv{
     text-align: center;
     color: white;

@@ -7,3 +7,38 @@ I, [2022-04-30T17:31:34.137183 #78860]  INFO -- : (0.000261s) PRAGMA foreign_key
 I, [2022-04-30T17:31:34.137719 #78860]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
 I, [2022-04-30T17:32:01.053831 #78905]  INFO -- : (0.002680s) PRAGMA foreign_keys = 1
 I, [2022-04-30T17:32:01.054502 #78905]  INFO -- : (0.000054s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T22:46:20.404776 #86205]  INFO -- : (0.008040s) PRAGMA foreign_keys = 1
+I, [2022-05-01T22:46:20.410638 #86205]  INFO -- : (0.000055s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T22:46:20.411942 #86205]  INFO -- : (0.000110s) SELECT sqlite_version()
+I, [2022-05-01T22:46:20.414623 #86205]  INFO -- : (0.002427s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('13139', 'BENJY', 'my name')
+I, [2022-05-01T22:47:33.018847 #86282]  INFO -- : (0.003599s) PRAGMA foreign_keys = 1
+I, [2022-05-01T22:47:33.019483 #86282]  INFO -- : (0.000048s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T22:47:33.021906 #86282]  INFO -- : (0.000173s) SELECT sqlite_version()
+I, [2022-05-01T22:47:33.025975 #86282]  INFO -- : (0.003810s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('29915', 'BENJY', 'my name')
+I, [2022-05-01T22:59:53.683098 #86282]  INFO -- : (0.001763s) SELECT * FROM `customgames` WHERE (`id` = '12345')
+I, [2022-05-01T23:09:55.107908 #88240]  INFO -- : (0.002604s) PRAGMA foreign_keys = 1
+I, [2022-05-01T23:09:55.108549 #88240]  INFO -- : (0.000050s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T23:14:16.346805 #88543]  INFO -- : (0.000289s) PRAGMA foreign_keys = 1
+I, [2022-05-01T23:14:16.346944 #88543]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T23:17:43.103572 #88543]  INFO -- : (0.010658s) SELECT sqlite_version()
+I, [2022-05-01T23:17:43.109832 #88543]  INFO -- : (0.005473s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('41797', 'DWAF', 'fwafwa')
+I, [2022-05-01T23:19:12.711807 #88543]  INFO -- : (0.005023s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('95520', 'DWAF', 'awfawf')
+I, [2022-05-01T23:19:30.901948 #88543]  INFO -- : (0.001095s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('64554', 'D', 's')
+I, [2022-05-01T23:21:19.160925 #88543]  INFO -- : (0.006020s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('81036', 'D', 's')
+I, [2022-05-01T23:22:44.400477 #88543]  INFO -- : (0.001411s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('51491', 'D', 's')
+I, [2022-05-01T23:22:48.892085 #88543]  INFO -- : (0.002193s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('95080', 'DAWF', 'awfwa')
+I, [2022-05-01T23:23:50.399979 #88543]  INFO -- : (0.002884s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('31962', 'DAWF', 'awfwa')
+I, [2022-05-01T23:23:55.937180 #88543]  INFO -- : (0.001689s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('07417', 'DAWF', 'fwafwa')
+I, [2022-05-01T23:27:49.791858 #88543]  INFO -- : (0.005342s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('05869', 'FWA', 'awd')
+I, [2022-05-01T23:28:19.973354 #88543]  INFO -- : (0.001041s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('02508', 'FWA', 'awd')
+I, [2022-05-01T23:29:31.800439 #88543]  INFO -- : (0.002754s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('63346', 'BENJY', 'pmaw')
+I, [2022-05-01T23:30:13.094847 #90040]  INFO -- : (0.000287s) PRAGMA foreign_keys = 1
+I, [2022-05-01T23:30:13.094948 #90040]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T23:31:05.365457 #90075]  INFO -- : (0.000261s) PRAGMA foreign_keys = 1
+I, [2022-05-01T23:31:05.365580 #90075]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2022-05-01T23:32:50.073974 #90075]  INFO -- : (0.000199s) SELECT sqlite_version()
+I, [2022-05-01T23:32:50.079009 #90075]  INFO -- : (0.004827s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('27480', 'DWA', 'dawf')
+I, [2022-05-01T23:32:56.021278 #90075]  INFO -- : (0.003798s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('90786', 'DWA', 'dawf')
+E, [2022-05-01T23:34:37.702849 #90075] ERROR -- : SQLite3::BusyException: database is locked: INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('03309', 'DOGGY', 'wow')
+I, [2022-05-01T23:34:54.737526 #90075]  INFO -- : (0.004615s) INSERT INTO `customgames` (`id`, `customWord`, `customDefinition`) VALUES ('32276', 'DOGGY', 'wow')
+I, [2022-05-01T23:34:58.067601 #90075]  INFO -- : (0.000995s) SELECT * FROM `customgames` WHERE (`id` = '32276')

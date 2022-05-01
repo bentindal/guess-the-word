@@ -19,6 +19,11 @@ get "/" do
   erb :main
 end
 
+get "/custom-game" do
+  @getID = ""
+  erb :customword
+end
+
 get '/custom-game/:id' do
   custom = params[:id]
   data = findCustomGame(custom)
@@ -32,12 +37,17 @@ get '/custom-game/:id' do
   end
 end
 
-
 post "/" do
   init()
   $score = params["endGameButton"].to_i
   puts "[CONT GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
   erb :main
+end
+
+post "/custom-game" do
+  puts "page attempted to load!!"
+  @getID = generateCustomGame(params["word"], params["definition"]).to_s
+  erb :customword
 end
 
 error 404 do

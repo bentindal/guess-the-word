@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css?rnd=321">
+    <link rel="icon" href="../images/wordlogo.ico">
+    <title>Custom Game</title>
+</head>
+
+<body>
+    <header>
+        <h5 id="header2">&nbsp</h5>
+        <h1 id="header">Guess the Word</h1>
+    </header>
+
+        <main>
+            <div id="customDiv">
+                <p>Create a Custom Game</p>
+                <form action="/custom-game" method="post">
+                    <p><label for="word">Word</label>
+                    <br>
+                    <input type="text" id="customWord" name="word" required></p>
+
+                    <p><label for="word">Definition</label>
+                    <br>
+                    <input type="text" id="customDefinition" name="definition" required></p>
+
+                    <input type="submit" id="register_button" value="Generate Link" onClick="copyToClipboard()">
+                </form>
+                <br>
+                <br>
+                <div>
+                    <a id="customLink" href="/">Press the button!</a>
+                </div>
+
+            </div>
+            
+        </main>
+    <footer>
+        <p><strong>Guess the Word</strong>, game made by Ben Tindal, definitions scraped from <a id="dictCreds" href="http://www.vocabulary.com/dictionary/">here</a></p>
+    </footer>
+</body>
+
+<script type="text/javascript" src="../scripts/customGame.js"></script>
+<script>
+    var cID = "<%= @getID%>"
+    updateLink()
+</script>
+
+
+</html>
+
