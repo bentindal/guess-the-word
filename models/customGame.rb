@@ -17,7 +17,12 @@ def findCustomGame(customID)
 end
 
 def generateCustomGame(cWord, cDefinition)
-  matches = DB[:customgames].where(word: cWord)
+  # Check that it is 5 digits long
+  if (cWord.length != 5)
+    return "1" # not correct length
+  end
+
+  # If successful...
   cID = SecureRandom.random_number(99999).to_s.rjust(5, '0')
   DB[:customgames] << {id: cID, customWord:cWord.upcase, customDefinition:cDefinition}
   puts "Success!"

@@ -45,7 +45,6 @@ post "/" do
 end
 
 post "/custom-game" do
-  puts "page attempted to load!!"
   @getID = generateCustomGame(params["word"], params["definition"]).to_s
   erb :customword
 end

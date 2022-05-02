@@ -134,9 +134,19 @@ canvas{
     font-size: 0.75em;
     color: rgb(255, 255, 255);
 }
+#customDiv #customWord, #customDiv #customDefinition{
+    text-align: center;
+}
+#customDiv #customWord{
+    font-size: 1.5em;
+    width: 30%;
+}
+#customDiv #customDefinition{
+    width: 60%;
+}
 
-#customDiv input{
-    width: 80%;
+#customDiv #registerButton{
+    width: 60%;
 }
 
 #customLink{
@@ -267,6 +277,20 @@ footer {
     #guessDiv button{
         width: 45px;
         height: 55px;
+        font-size: 1.2em;
+    }
+    #customDiv{
+        margin-left: 25%;
+        margin-right: 25%;
+        
+    }
+    #customDiv #customWord{
+        text-align: center;
+        width: 25%;
+        font-size: 2em;
+    }
+    #customDiv #customDefinition{
+        text-align: center;
         font-size: 1.2em;
     }
     footer{
