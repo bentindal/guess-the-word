@@ -135,6 +135,10 @@ canvas{
     color: rgb(255, 255, 255);
 }
 
+#customDiv input{
+    width: 80%;
+}
+
 #customLink{
     color: rgb(0, 0, 0);
     background-color: white;
@@ -148,6 +152,7 @@ canvas{
 #customLink p{
     margin: 0;
 }
+
 
 #register_button{
     border-radius: 5px;
