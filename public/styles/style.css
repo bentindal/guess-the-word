@@ -117,17 +117,16 @@ canvas{
 }
 
 #customDiv{
-    text-align: center;
-    padding: 5px;
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-right: 15%;
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align:center;
+    margin: 1em;
     padding-bottom: 2em;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
     color: rgb(255, 255, 255);
-    width: 50%;
+
     background-color:#28537c;
 }
 
