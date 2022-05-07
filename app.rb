@@ -24,7 +24,7 @@ get "/custom-game" do
   erb :customword
 end
 
-get '/custom-game/:id' do
+get '/game' do
   custom = params[:id]
   data = findCustomGame(custom)
   @word = data[0]
