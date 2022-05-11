@@ -21,10 +21,13 @@ def generateCustomGame(cWord, cDefinition)
   if (cWord.length != 5)
     return "1" # not correct length
   end
+  if (isValidWord(cWord.upcase) != true)
+    return "2" # not a valid word!
+  end
 
-  # If successful...
+  # If successfull...
   cID = SecureRandom.random_number(99999).to_s.rjust(5, '0')
   DB[:customgames] << {id: cID, customWord:cWord.upcase, customDefinition:cDefinition}
-  puts "Success!"
+  puts "Successfully generated a custom game!"
   return cID
 end

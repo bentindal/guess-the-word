@@ -8,4 +8,7 @@ function updateLink(){
   if (cID == 1){
     linkElement.innerText = "word must be 5 characters long"
   }
+  if (cID == 2){
+    linkElement.innerText = "must be a valid word"
+  }
 }

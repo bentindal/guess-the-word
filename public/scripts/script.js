@@ -68,11 +68,33 @@ function clearBoard(){
 function validateGuess(guess){
   // Guess must be 5 letters long
   if (guess.length != 5){
+    updateHeader("GUESS MUST BE 5 LETTERS LONG")
     return false;
   }
-  return true;
+  // Guess must be a valid word
+  if(isValidWord(guess)){
+    updateHeader("")
+    return true;
+  }
+  updateHeader("GUESS MUST A VALID WORD")
+  return false;
 }
 
+function updateHeader(text){
+  const header = document.getElementById("header")
+  if(text == ""){
+    if(header.classList.contains("red")){
+      header.classList.remove("red")
+    }
+    updateScore(0)
+  }
+  else{
+    const sHeader = document.getElementById("header2")
+    sHeader.innerHTML = "&nbsp"
+    header.innerText = text;
+    header.classList.add("red")
+  }
+}
 function makeGuess(){
   var guess = letterGuess
   guess = guess.toUpperCase()
@@ -84,6 +106,7 @@ function makeGuess(){
 }
 
 function checkIfCorrect(guessArray, wordArray){
+  updateScore(0)
   var x = 0;
   for(var y=0; y<wordArray.length; y++){
     for(x=0; x<wordArray.length; x++){
@@ -146,6 +169,13 @@ function updateScore(amount){
     console.log("= " + score)
     document.getElementById("header2").innerHTML = "<i>SCORE</i>"
     document.getElementById('header').innerText = score
+  }
+}
+
+function isValidWord(guess){
+  guess = guess.toUpperCase();
+  for(let x=0; x<wordList.length; x++){
+    if(wordList[x].toString() == guess){return true}
   }
 }
 

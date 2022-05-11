@@ -10,6 +10,7 @@ def init
   puts "init called"
   @word = newWord().upcase
   @definition = define(@word)
+  @list = @listOfWords
 end
 
 get "/" do
@@ -33,6 +34,7 @@ get '/game' do
     erb :pagenotfound
   else
     puts "[CUSTOM #{Time.now}] #{@word} : #{@definition}"
+    @list = File.read('words.txt').upcase.lines.map &:split
     erb :custom_game
   end
 end
