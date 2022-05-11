@@ -68,7 +68,7 @@ function clearBoard(){
 function validateGuess(guess){
   // Guess must be 5 letters long
   if (guess.length != 5){
-    updateHeader("GUESS MUST BE 5 LETTERS LONG")
+    updateHeader("Must be 5 Letters")
     return false;
   }
   // Guess must be a valid word
@@ -76,7 +76,7 @@ function validateGuess(guess){
     updateHeader("")
     return true;
   }
-  updateHeader("GUESS MUST A VALID WORD")
+  updateHeader("Not a Word")
   return false;
 }
 
