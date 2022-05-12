@@ -47,6 +47,37 @@ header .leftSide{
     font-size: 1.5em;
 }
 
+#menu nav{
+    background-color: blue;
+    position: sticky;
+    top: 0;
+}
+
+#menu #logo{
+    float: center;
+}
+
+#menu ul{
+    margin-left: 0;
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em;
+    overflow: hidden;
+    background-color: #1e4366;
+    float: middle;
+    border:1px solid #bbb;
+}
+
+#menu .side:hover:not(.active) {
+    background-color: rgb(38, 48, 74);
+}
+
+#menu .side a{
+    color: white;
+    text-decoration: none;
+}
+
 nav {
     margin: 0;
     padding: 5px;

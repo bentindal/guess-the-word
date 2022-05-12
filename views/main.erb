@@ -9,12 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <h5 id="header2">&nbsp</h5>
-        <h1 id="header">Guess the Word</h1>
-        
-        
-    </header>
+    <%= erb :"common/nav" %>
         <main>
             <div id="wordCanvas">
                 <script>
@@ -38,9 +33,7 @@
             </div>
             <br><br><br><br><br>
         </main>
-    <footer>
-        <p><strong>Guess the Word</strong>, game made by Ben Tindal, definitions scraped from <a id="dictCreds" href="http://www.vocabulary.com/dictionary/">here</a></p>
-    </footer>
+    <%= erb :"common/footer" %>
 </body>
 
 

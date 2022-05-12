@@ -9,12 +9,8 @@
 </head>
 
 <body>
-    <header>
-        <h5 id="header2">&nbsp</h5>
-        <h1 id="header">Guess the Word</h1>
-        <br>
-    </header>
-
+    <%= erb :"common/nav" %>
+    <br>
         <main>
             <div id="customDiv">
                 <p>Create a Custom Game</p>
@@ -37,9 +33,7 @@
             </div>
             <br><br><br><br><br>
         </main>
-    <footer>
-        <p><strong>Guess the Word</strong>, game made by Ben Tindal, definitions scraped from <a id="dictCreds" href="http://www.vocabulary.com/dictionary/">here</a></p>
-    </footer>
+    <%= erb :"common/footer" %>
 </body>
 
 <script type="text/javascript" src="../scripts/customGame.js"></script>
