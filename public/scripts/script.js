@@ -139,6 +139,7 @@ function checkIfCorrect(guessArray, wordArray){
 }
 
 function endGame(state){
+  document.getElementById("hintDiv").removeAttribute("hidden")
   const message = document.getElementById("guessHint")
   if(state == 0){ // Loss
     message.innerHTML = "Unlucky! The word was <b>"+word+"</b>\nYou scored: " + score
@@ -157,9 +158,8 @@ function endGame(state){
   var definitionText = document.getElementById("definitionText")
   definitionText.innerHTML = "<i>"+definition+"</i>"
   var tryAgainButton = document.getElementById("tryAgain")
-  tryAgainButton.innerHTML = "<b>Try Again</b>"
+  tryAgainButton.innerHTML = "<b>Next Word </b>"
   tryAgainButton.setAttribute("value", score)
-  document.getElementById("hintDiv").removeAttribute("hidden")
   if (score == null){
     tryAgainButton.remove()
   }

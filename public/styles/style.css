@@ -218,10 +218,11 @@ canvas{
     background-color:rgb(255, 255, 255);
     font-size: 1em;  
     border-color: black;
-    width: 25%;
-    height: 30px;
+    width: 35%;
+    height: 2em;
     border-radius: 5px;
     white-space: nowrap;
+    padding: 0;
 }
 
 /* Footer and below! */
@@ -299,15 +300,20 @@ td{
 
 /* Custom settings for different screen widths SMALLEST TO LARGEST*/
 
-@media screen and (min-width: 320px){ /* Normal Phone */
+@media screen and (min-width: 220px){ /* Normal Phone */
+    nav ul{
+        font-size: 0.8em;
+    }
+    nav #header{
+        font-size: 1.2em;
+    }
     canvas {
         width: 45px;
         height: 45px;
     }
     body header {
-        font-size: 1rem;
+        font-size: 0.8em;
     }
-
     #guessDiv button{
         width: 30px;
         height: 35px;
@@ -316,9 +322,12 @@ td{
     footer{
         font-size: 10px;
     }
+    #definitionText{
+        font-size: 0.8em;
+    }
 }
 
-@media screen and (min-width: 414px){ /* larger phone */
+@media screen and (min-width: 390px){ /* larger phone */
     canvas {
         width: 45px;
         height: 45px;
@@ -338,9 +347,15 @@ td{
 }
 
 @media screen and (min-width: 724px){ /* Tablet */
+    nav ul{
+        font-size: 1.2em;
+    }
+    nav #header{
+        font-size: 2.2em;
+    }
     canvas {
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
     }
     body header {
         font-size: 1rem;
@@ -353,7 +368,6 @@ td{
     #customDiv{
         margin-left: 25%;
         margin-right: 25%;
-        
     }
     #customDiv #customWord{
         text-align: center;

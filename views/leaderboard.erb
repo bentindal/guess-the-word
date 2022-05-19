@@ -19,7 +19,6 @@
                         <th>Position</th>
                         <th>Name</th>
                         <th>Score</th>
-                        <th>Date</th>
                     </tr>
                     <% 
                     @results.each do |scoreDB|
@@ -28,7 +27,6 @@
                         <td><%=x%></td>
                         <td><%= scoreDB[:name]%></td>
                         <td><%= scoreDB[:score]%></td>
-                        <td><%= scoreDB[:date]%></td>
                     </tr>
                     <script><%= x += 1%></script>
                     <% end%>

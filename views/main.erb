@@ -21,8 +21,12 @@
                 </script>
                 <script type="text/javascript" src="scripts/script.js"></script>
             </div>
-            <div id="hintDiv" >
+            <div id="hintDiv" hidden>
                 <strong><p id="guessHint"></p></strong>
+                <p id="definitionText"></p>
+                <form action="/" method="post">
+                    <button name="endGameButton" id="tryAgain"><%=$score%></button>
+                </form>
                 <p id="definitionText"></p>
                 <div id="customDiv" hidden>
                     <p>Leaderboard</p>
