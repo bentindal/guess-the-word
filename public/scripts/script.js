@@ -144,7 +144,7 @@ function endGame(state){
   if(state == 0){ // Loss
     message.innerHTML = "Unlucky! The word was <b>"+word+"</b>\nYou scored: " + score
     message.classList.add("red")
-    if (score != null) {
+    if (score > 0) {
     document.getElementById("customDiv").removeAttribute("hidden")
     }
     score = 0
@@ -171,7 +171,7 @@ function updateScore(amount){
     score += amount
     console.log("= " + score)
     document.getElementById('header').innerText = score
-    if (score > 1) {
+    if (score != null) {
       document.getElementById("scoreBox").setAttribute("value", score)
     }
   }
@@ -188,3 +188,4 @@ function isValidWord(guess){
 var canvasArray = createBoard(5, 6);
 var rowPointer = 0;
 const correctArray = wordToArray(word); // Array of the word to guess
+document.getElementById("scoreBox").setAttribute("value", score)
