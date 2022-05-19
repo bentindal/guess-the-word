@@ -141,9 +141,12 @@ function checkIfCorrect(guessArray, wordArray){
 function endGame(state){
   const message = document.getElementById("guessHint")
   if(state == 0){ // Loss
-    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>, final score was " + score;
-    score = 0
+    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>\nYou scored: " + score
     message.classList.add("red")
+    if (score != null) {
+    document.getElementById("customDiv").removeAttribute("hidden")
+    }
+    score = 0
   }
   else{ // Win
     message.innerHTML = "Congratulations!";
@@ -169,6 +172,9 @@ function updateScore(amount){
     console.log("= " + score)
     document.getElementById("header2").innerHTML = "<i>SCORE</i>"
     document.getElementById('header').innerText = score
+    if (score > 1) {
+      document.getElementById("scoreBox").setAttribute("value", score)
+    }
   }
 }
 

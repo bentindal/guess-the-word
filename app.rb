@@ -14,6 +14,7 @@ def init
 end
 
 get "/" do
+  @page_name = "Guess the Word"
   init()
   $score = "0"
   puts "[NEW GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
@@ -21,11 +22,13 @@ get "/" do
 end
 
 get "/custom-game" do
+  @page_name = "Custom Game"
   @getID = ""
   erb :customword
 end
 
 get '/game' do
+  @page_name = "Custom Game"
   custom = params[:id]
   data = findCustomGame(custom)
   @word = data[0]
@@ -40,6 +43,7 @@ get '/game' do
 end
 
 post "/" do
+  @page_name = "Guess the Word"
   init()
   $score = params["endGameButton"].to_i
   puts "[CONT GAME #{Time.now}] #{@word} : #{$score} : #{@definition}"
@@ -47,11 +51,27 @@ post "/" do
 end
 
 post "/custom-game" do
-  puts "page attempted to load!!"
+  @page_name = "Custom Game"
   @getID = generateCustomGame(params["word"], params["definition"]).to_s
   erb :customword
 end
 
+get '/leaderboard' do
+  @page_name = "Leaderboard"
+  @results = sortDB()
+  erb :leaderboard
+end
+
+post "/leaderboard" do
+  @page_name = "Leaderboard"
+  name = params[:name]
+  score = params[:score]
+  submitScore(name, score)
+  @results = sortDB()
+  erb :leaderboard
+end
+
 error 404 do
+  @page_name = "Guess the Word"
   erb :pagenotfound
 end

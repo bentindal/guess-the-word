@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/style.css?rnd=123">
+    <link rel="icon" href="images/wordlogo.ico">
+    <title>Stats</title>
+</head>
+
+<body>
+    <%= erb :"common/nav" %>
+    <br>
+        <main>
+        <script><%= x=1%></script>
+            <div id="customDiv">
+                <table id="statsTable">
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                    </tr>
+                    <% 
+                    @results.each do |scoreDB|
+                    %>
+                    <tr id="table-<%=x%>">
+                        <td><%=x%></td>
+                        <td><%= scoreDB[:name]%></td>
+                        <td><%= scoreDB[:score]%></td>
+                        <td><%= scoreDB[:date]%></td>
+                    </tr>
+                    <script><%= x += 1%></script>
+                    <% end%>
+                </table>
+            </div>
+            <br><br><br><br><br>
+        </main>
+    <%= erb :"common/footer" %>
+</body>
+</html>
+
