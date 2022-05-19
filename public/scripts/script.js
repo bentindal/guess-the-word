@@ -170,7 +170,6 @@ function updateScore(amount){
     console.log("Score = " + score + " + " + amount)
     score += amount
     console.log("= " + score)
-    document.getElementById("header2").innerHTML = "<i>SCORE</i>"
     document.getElementById('header').innerText = score
     if (score > 1) {
       document.getElementById("scoreBox").setAttribute("value", score)
