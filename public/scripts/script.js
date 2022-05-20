@@ -148,6 +148,8 @@ function endGame(state){
     document.getElementById("customDiv").removeAttribute("hidden")
     }
     score = 0
+    var tryAgainButton = document.getElementById("tryAgain")
+    tryAgainButton.remove()
   }
   else{ // Win
     message.innerHTML = "Congratulations!";

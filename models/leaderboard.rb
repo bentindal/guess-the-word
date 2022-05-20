@@ -30,7 +30,7 @@ def getScoreToBeat()
 end
 
 def submitScore(n, s)
-    if s.to_i > 0
+    if s.to_i > 0 && s.to_i != -1
         dateDB = Time.now.strftime("%d/%m/%Y")
         DB[:scores] << {name: n, score:s.to_i, date:dateDB}
         puts "[#{dateDB}] Name #{n} just submitted a score of #{s}!"
