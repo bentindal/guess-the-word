@@ -6,9 +6,10 @@ def sortDB
         scoreRecords[x] = score[:score].to_i
         x += 1
     end
-
-    scoreRecords.sort.reverse!
-
+    #puts scoreRecords
+    scoreRecords.sort!
+    scoreRecords.reverse!
+    
     results = []
     x = 0
     scoreRecords.each do |s|
