@@ -168,6 +168,14 @@ function endGame(state){
     }
   }
   else{ // Win
+    deleteAllCanvas(canvasArray)
+    canvasArray = createBoard(5, 1)
+    canvasArray[0][0].classList.add("green")
+    canvasArray[0][1].classList.add("green")
+    canvasArray[0][2].classList.add("green")
+    canvasArray[0][3].classList.add("green")
+    canvasArray[0][4].classList.add("green")
+    drawGuess(word)
     message.innerHTML = "<b>Congratulations!</b> You guessed the word correctly";
     message.classList.add("green")
     if (gameType == "main"){
@@ -195,6 +203,15 @@ function updateScore(amount){
     document.getElementById('header').innerText = score
     if (gameType == "main"){
       document.getElementById("scoreBox").setAttribute("value", score)
+    }
+  }
+}
+
+function deleteAllCanvas(array){
+  for(var y=0; y<array.length; y++){
+    for(var x=0; x<5; x++){
+      console.log("canv-"+y+x)
+      document.getElementById("canv-"+y+x).remove()
     }
   }
 }
