@@ -140,6 +140,7 @@ function checkIfCorrect(guessArray, wordArray){
   }
 
   rowPointer += 1
+  backupPointer += 1
   if(greensFound == 5){
     endGame(1) // Win
   }
@@ -175,7 +176,9 @@ function endGame(state){
     canvasArray[0][2].classList.add("green")
     canvasArray[0][3].classList.add("green")
     canvasArray[0][4].classList.add("green")
+    rowPointer = 0
     drawGuess(word)
+    rowPointer = backupPointer
     message.innerHTML = "<b>Congratulations!</b> You guessed the word correctly";
     message.classList.add("green")
     if (gameType == "main"){
@@ -214,7 +217,6 @@ function deleteAllCanvas(array){
       document.getElementById("canv-"+y+x).remove()
     }
   }
-  rowPointer = 0
 }
 
 function isValidWord(guess){
@@ -227,4 +229,5 @@ function isValidWord(guess){
 // Main ------------------------->
 var canvasArray = createBoard(5, 6);
 var rowPointer = 0;
+var backupPointer = 0;
 const correctArray = wordToArray(word); // Array of the word to guess
