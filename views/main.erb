@@ -13,6 +13,7 @@
         <main>
             <div id="wordCanvas">
                 <script>
+                var gameType = "main"
                 var wordList = <%= @list %>
                 var score = 0
                 var word = "<%= @word %>"
@@ -24,10 +25,6 @@
             <div id="hintDiv" hidden>
                 <strong><p id="guessHint"></p></strong>
                 <p id="definitionText"></p>
-                <form action="/" method="post">
-                    <button name="endGameButton" id="tryAgain"><%=$score%></button>
-                </form>
-                <p id="definitionText"></p>
                 <div id="customDiv" hidden>
                     <p>Leaderboard</p>
                         <form action="/leaderboard" method="post">
@@ -38,6 +35,9 @@
                             <input type="submit" id="highscoreButton" value="Submit Score">
                         </form>
                 </div>
+                <form action="/" method="post">
+                    <button name="endGameButton" id="tryAgain"><%=$score%></button>
+                </form>
             </div>
             <div id="guessDiv">
                 <script type="text/javascript" src="scripts/keyboard.js"></script>

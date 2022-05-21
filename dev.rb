@@ -56,7 +56,7 @@ post "/custom-game" do
   erb :customword
 end
 
-get '/leaderboard' do
+get "/leaderboard" do
   @page_name = "Leaderboard"
   @results = sortDB()
   erb :leaderboard
@@ -69,6 +69,17 @@ post "/leaderboard" do
   submitScore(name, score)
   @results = sortDB()
   erb :leaderboard
+end
+
+get "/jobs" do
+  @list = File.read('words.txt').upcase.lines.map &:split
+  @listOfWords = File.read('jobs.txt').upcase.lines.map &:split
+  randomNumber = rand(0..@listOfWords.length-1)
+  @word = @listOfWords[randomNumber].to_s[2..6]
+  @definition = define(@word)
+  @page_name = "Guess The Word - Jobs"
+  puts "[JOBS #{Time.now}] #{@word} : #{@definition}"
+  erb :jobs_words
 end
 
 error 404 do

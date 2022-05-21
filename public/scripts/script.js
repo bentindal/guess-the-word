@@ -72,12 +72,12 @@ function validateGuess(guess){
     return false;
   }
   // Guess must be a valid word
-  if(isValidWord(guess)){
-    updateHeader("")
-    return true;
+  if(isValidWord(guess) == false){
+    updateHeader("Not a Word")
+    return false;
   }
-  updateHeader("Not a Word")
-  return false;
+  updateHeader("")
+  return true;
 }
 
 function updateHeader(text){
@@ -86,7 +86,16 @@ function updateHeader(text){
     if(header.classList.contains("red")){
       header.classList.remove("red")
     }
-    updateScore(0)
+    if (gameType == "main"){
+      updateScore(0)
+    }
+    else if(gameType == "custom1"){
+      header.innerHTML = "<a href='/custom-game'><strong>Custom Game</strong></a>";
+    }
+    else if(gameType == "custom2"){
+      header.innerHTML = "<a href='/jobs'><strong>Guess The Word - Jobs</strong></a>";
+    }
+    
   }
   else{
     const sHeader = document.getElementById("header2")
@@ -95,6 +104,7 @@ function updateHeader(text){
     header.classList.add("red")
   }
 }
+
 function makeGuess(){
   var guess = letterGuess
   guess = guess.toUpperCase()
@@ -141,39 +151,49 @@ function checkIfCorrect(guessArray, wordArray){
 function endGame(state){
   document.getElementById("hintDiv").removeAttribute("hidden")
   const message = document.getElementById("guessHint")
+  var tryAgainButton = document.getElementById("tryAgain")
   if(state == 0){ // Loss
-    message.innerHTML = "Unlucky! The word was <b>"+word+"</b>\nYou scored: " + score
-    message.classList.add("red")
-    if (score > 0) {
-    document.getElementById("customDiv").removeAttribute("hidden")
+    if(gameType=="main"){
+      message.innerHTML = message.innerHTML = '<b>Unlucky!</b> The word was "<u>'+word+'</u>" ' + "You scored: " + score
     }
-    score = 0
-    var tryAgainButton = document.getElementById("tryAgain")
-    tryAgainButton.remove()
+    else{
+      message.innerHTML = '<b>Unlucky!</b> The word was "<u>'+word+'</u>"'
+    }
+    message.classList.add("red")
+    if (gameType == "main"){
+      if (score > 0) {
+      document.getElementById("customDiv").removeAttribute("hidden")
+      }
+      score = 0
+    }
   }
   else{ // Win
-    message.innerHTML = "Congratulations!";
+    message.innerHTML = "<b>Congratulations!</b> You guessed the word correctly";
     message.classList.add("green")
-    updateScore((7-rowPointer)*10)
+    if (gameType == "main"){
+      updateScore((7-rowPointer)*10)
+    }
   }
   document.getElementById("guessDiv").remove()
   var definitionText = document.getElementById("definitionText")
   definitionText.innerHTML = "<i>"+definition+"</i>"
-  var tryAgainButton = document.getElementById("tryAgain")
-  tryAgainButton.innerHTML = "<b>Next Word </b>"
-  tryAgainButton.setAttribute("value", score)
-  if (score == null){
+  if (gameType == "main"){
+    tryAgainButton = document.getElementById("tryAgain")
+    tryAgainButton.innerHTML = "<b>New Game</b>"
+    tryAgainButton.setAttribute("value", score)
+  }
+  if (gameType == "custom1"){
     tryAgainButton.remove()
   }
 }
 
 function updateScore(amount){
-  if(score != null){
+  if(gameType == "main"){
     console.log("Score = " + score + " + " + amount)
     score += amount
     console.log("= " + score)
     document.getElementById('header').innerText = score
-    if (score != null) {
+    if (gameType == "main"){
       document.getElementById("scoreBox").setAttribute("value", score)
     }
   }
@@ -190,4 +210,3 @@ function isValidWord(guess){
 var canvasArray = createBoard(5, 6);
 var rowPointer = 0;
 const correctArray = wordToArray(word); // Array of the word to guess
-document.getElementById("scoreBox").setAttribute("value", score)
