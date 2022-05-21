@@ -210,10 +210,11 @@ function updateScore(amount){
 function deleteAllCanvas(array){
   for(var y=0; y<array.length; y++){
     for(var x=0; x<5; x++){
-      console.log("canv-"+y+x)
+      console.log("canv-"+y+x+" deleted...")
       document.getElementById("canv-"+y+x).remove()
     }
   }
+  rowPointer = 0
 }
 
 function isValidWord(guess){
