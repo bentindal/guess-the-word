@@ -179,6 +179,7 @@ function endGame(state){
     rowPointer = 0
     drawGuess(word)
     rowPointer = backupPointer
+    
     message.innerHTML = "<b>Congratulations!</b> You guessed the word correctly";
     message.classList.add("green")
     if (gameType == "main"){
@@ -224,6 +225,7 @@ function isValidWord(guess){
   for(let x=0; x<wordList.length; x++){
     if(wordList[x].toString() == guess){return true}
   }
+  return false
 }
 
 // Main ------------------------->
