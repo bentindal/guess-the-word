@@ -58,7 +58,7 @@ end
 
 get "/leaderboard" do
   @page_name = "Leaderboard"
-  @results = sortDB()
+  @results = sortDB()[0...10]
   erb :leaderboard
 end
 
@@ -67,7 +67,7 @@ post "/leaderboard" do
   name = params[:name]
   score = params[:score]
   submitScore(name, score)
-  @results = sortDB()
+  @results = sortDB()[0...10]
   erb :leaderboard
 end
 
