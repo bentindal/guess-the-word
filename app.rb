@@ -71,8 +71,8 @@ post "/leaderboard" do
   erb :leaderboard
 end
 
-get "/jobs" do
-  @list = File.read('words.txt').upcase.lines.map &:split
+get "/wow" do
+  @list = File.read('words.txt').upcase.lines.map &:split + File.read('jobs.txt').upcase.lines.map &:split
   @listOfWords = File.read('jobs.txt').upcase.lines.map &:split
   randomNumber = rand(0..@listOfWords.length-1)
   @word = @listOfWords[randomNumber].to_s[2..6]

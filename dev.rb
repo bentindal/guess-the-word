@@ -67,11 +67,11 @@ post "/leaderboard" do
   name = params[:name]
   score = params[:score]
   submitScore(name, score)
-  @results = sortDB()[0...10]
+  @results = sortDB()
   erb :leaderboard
 end
 
-get "/jobs" do
+get "/wow" do
   @list = File.read('words.txt').upcase.lines.map &:split
   @listOfWords = File.read('jobs.txt').upcase.lines.map &:split
   randomNumber = rand(0..@listOfWords.length-1)
