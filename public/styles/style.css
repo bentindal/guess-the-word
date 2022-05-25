@@ -23,15 +23,8 @@ body header {
     text-align: center;
 }
 
-#header2, #header{
-    margin: 5px;
-}
-
-.rightSide, .leftSide{
-    background-color: rgb(45, 45, 69);
-    margin-left: 0em;
-    border-style: solid;
-    color: white;
+#header2{
+    margin: 0;
 }
 
 #header{
@@ -54,22 +47,21 @@ body header {
     font-size: 1em;
 }
 
-#menu #header{
+#header{
     background-color:#436b91;
 }
-#menu ul{
+
+nav ul{
     margin-left: 0;
     display: inline;
     list-style-type: none;
     margin: 0;
     padding: 0.5em;
-    overflow: hidden;
     background-color: #5e96cb;
-    float: middle;
-    border:1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 }
 
-#menu ul:hover:not(.active) {
+nav ul:hover:not(.active) {
     background-color: rgb(38, 48, 74);
 }
 
@@ -150,6 +142,8 @@ canvas{
 
 #guessHint{
     font-size: 1.5em;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #customDiv{
@@ -198,7 +192,6 @@ canvas{
 #customLink p{
     margin: 0;
 }
-
 
 #register_button{
     border-radius: 5px;
@@ -259,7 +252,11 @@ footer {
     background-color: rgb(140, 140, 140);
 }
 
-.red {
+.red{
+    background-color: rgb(165, 53, 33);
+}
+
+header #menu .red{
     background-color: rgb(165, 53, 33);
 }
 
@@ -386,11 +383,12 @@ td{
 
 @media screen and (min-width: 1224px){ /* S Laptop */
     canvas {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
     body header {
-        font-size: 1rem;
+        font-size: 0.9em;
+        margin: 1em;
     }
     #guessDiv button{
         width: 45px;
