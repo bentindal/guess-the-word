@@ -82,9 +82,38 @@ function colourLetter(letter, colour){
   }
 }
 
+function setMyKeyDownListener() {
+  window.addEventListener(
+    "keydown",
+    function(event) {OnPress(event.key)}
+  )
+}
+
+function OnPress (key) {
+  key = key.toUpperCase()
+  //alert("Is " + key + " a letter: " + isALetter(key));
+  if (key == "BACKSPACE"){removeLetterFromGuess()}
+  else if (key == "ENTER"){makeGuess()}
+  else if (isALetter(key)){
+    addToGuess(key)
+  }
+  else{return false}
+}
+
+function isALetter(letter){
+  var letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
+  for(var i = 0; i<letters.length; i++){
+    if (letters[i] == letter){
+      return true
+    }
+  }
+  return false
+}
+
 // Main ------------------------->
 const ROW1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
 const ROW2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
 const ROW3 = ["Z", "X", "C", "V", "B", "N", "M"]
-generateKeyboard(ROW1, ROW2, ROW3);
+generateKeyboard(ROW1, ROW2, ROW3)
+setMyKeyDownListener()
 var letterGuess = ""
