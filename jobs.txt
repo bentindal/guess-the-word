@@ -1,5 +1,4 @@
 Apply
-Course
 Carer
 Farms
 Level
@@ -28,7 +27,6 @@ Reads
 Welsh
 Topic
 Brave
-Strong
 Count
 Court
 Judge
@@ -85,7 +83,7 @@ Loyal
 Helps
 Teach
 Radio
-Skills
+Skill
 Gcses
 Exams
 Tests
@@ -98,8 +96,6 @@ Phone
 Audit
 Trust
 Craft
-Climb
-Vicar
 Drive
 Write
 Guard

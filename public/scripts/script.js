@@ -93,13 +93,13 @@ function updateHeader(text){
       header.innerHTML = "<a href='/custom-game'><strong>Custom Game</strong></a>";
     }
     else if(gameType == "custom2"){
-      header.innerHTML = "<a href='/jobs'><strong>Guess The Word - Jobs</strong></a>";
+      header.innerHTML = "<a href='/jobs'><strong>Jobs & Skills</strong></a>";
     }
     
   }
   else{
     const sHeader = document.getElementById("header2")
-    sHeader.innerHTML = "&nbsp"
+    sHeader.innerHTML = "Guess the Word"
     header.innerText = text;
     header.classList.add("red")
   }

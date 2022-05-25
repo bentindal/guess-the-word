@@ -71,14 +71,14 @@ post "/leaderboard" do
   erb :leaderboard
 end
 
-get "/wow" do
+get "/wowproject" do
   @list = File.read('words.txt').upcase.lines.map &:split
   @listOfWords = File.read('jobs.txt').upcase.lines.map &:split
   randomNumber = rand(0..@listOfWords.length-1)
   @word = @listOfWords[randomNumber].to_s[2..6]
   @definition = define(@word)
-  @page_name = "Guess The Word - Jobs"
-  puts "[JOBS #{Time.now}] #{@word} : #{@definition}"
+  @page_name = "Guess The Word - Jobs & Skills"
+  puts "[J&S #{Time.now}] #{@word} : #{@definition}"
   erb :jobs_words
 end
 
