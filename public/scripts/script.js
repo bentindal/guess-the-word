@@ -93,7 +93,7 @@ function updateHeader(text){
       header.innerHTML = "<a href='/custom-game'><strong>Custom Game</strong></a>";
     }
     else if(gameType == "custom2"){
-      header.innerHTML = "<a href='/jobs'><strong>Jobs & Skills</strong></a>";
+      header.innerHTML = "<a href='/jobs' id='customHeader2'><strong>Jobs, Skills, Qualtiies & Places of Work</strong></a>";
     }
     
   }

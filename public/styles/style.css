@@ -51,6 +51,10 @@ body header {
     background-color:#436b91;
 }
 
+#menu #header #customHeader2{
+    font-size: 0.6em;
+}
+
 nav ul{
     margin-left: 0;
     display: inline;
@@ -313,13 +317,16 @@ td{
     }
     #guessDiv button{
         width: 30px;
-        height: 35px;
+        height: 40px;
         font-size: 1em;
     }
     footer{
         font-size: 10px;
     }
     #definitionText{
+        font-size: 0.8em;
+    }
+    #menu #header #customHeader2{
         font-size: 0.8em;
     }
 }
@@ -341,6 +348,9 @@ td{
     footer{
         font-size: 12px;
     }
+    #menu #header #customHeader2{
+        font-size: 0.5em;
+    }
 }
 
 @media screen and (min-width: 724px){ /* Tablet */
@@ -351,8 +361,8 @@ td{
         font-size: 2.2em;
     }
     canvas {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
     }
     body header {
         font-size: 1rem;
@@ -379,6 +389,9 @@ td{
         font-size: 12px;
         position: fixed;
     }
+    #menu #header #customHeader2{
+        font-size: 0.5em;
+    }
 }
 
 @media screen and (min-width: 1224px){ /* S Laptop */
@@ -398,5 +411,8 @@ td{
     footer{
         font-size: 12px;
         position: fixed;
+    }
+    #menu #header #customHeader2{
+        font-size: 0.9em;
     }
 }
